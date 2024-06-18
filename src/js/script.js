@@ -17,9 +17,9 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
 
-  allValid = allValid && validateField(name, nameRegex);
-  allValid = allValid && validateField(email, emailRegex);
-  allValid = allValid && validateField(phone, phoneRegex);
+  allValid = allValid && validateField(name, nameRegex, 'Name should be letters and spaces only');
+  allValid = allValid && validateField(email, emailRegex, 'Please enter a valid email address');
+  allValid = allValid && validateField(phone, phoneRegex, 'Phone number should be in format (123) 456-7890');
 
   if (!isValidDate(eventDate.value)) {
       showError(eventDate, 'Please enter a valid date in MM/DD/YYYY format');
@@ -53,9 +53,9 @@ document.querySelector('.container.success > p:last-of-type').addEventListener('
 })
 
 
-function validateField(field, regex) {
+function validateField(field, regex, customMessage) {
   if (!regex.test(field.value)) {
-      showError(field, 'Invalid input');
+      showError(field, customMessage? customMessage: 'Invalid input');
       return false;
   } else {
       showSuccess(field);
