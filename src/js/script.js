@@ -1,3 +1,4 @@
+// Event to validate form inputs and showing success tab on successfull validation
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -37,6 +38,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   }
 });
 
+// Event to reset the form and moving back to the form incase a user wants to register other tickets
 document.querySelector('.container.success > p:last-of-type').addEventListener('click', function (event) {
   event.preventDefault();
 
@@ -47,6 +49,7 @@ document.querySelector('.container.success > p:last-of-type').addEventListener('
   hideShow(successContainer, fillableFormContainer, 'block');
   registrationForm.reset();
 })
+
 
 function validateField(field, regex) {
   if (!regex.test(field.value)) {
