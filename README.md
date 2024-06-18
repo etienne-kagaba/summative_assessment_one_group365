@@ -5,6 +5,7 @@ This repo contains code for events registration form. It implements validation f
 - `index.html`: This is the entry point, which contains the html codes for the form page.
 - `css/`: This folder contains the css styles for the form page.
 - `js/`: This folder contains necessary scripts for the form validation and event handling logic.
+- `images/`: This folder contains images used in the project.
 
 To access this project, please install Live Server extenstion in your VScode environment. Then clone this repo and start Live Server on the `index.html` file. You should be able to preview the page in your default browser!
 
