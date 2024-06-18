@@ -10,12 +10,12 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   const successContainer = document.querySelector('.container.success');
   const fillableFormContainer = document.querySelector('.container.form');
 
-  //To track if all validations were successful
-  let allValid = true;
-
   const nameRegex = /^[a-zA-Z\s]+$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
+
+  //To track if all validations were successful
+  let allValid = true;
 
   allValid = allValid && validateField(name, nameRegex, 'Name should be letters and spaces only');
   allValid = allValid && validateField(email, emailRegex, 'Please enter a valid email address');
