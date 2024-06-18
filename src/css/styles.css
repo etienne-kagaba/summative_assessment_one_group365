@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/src/images/event.jpg');
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.container.success {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container.success > p {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: light;
+}
+
+.container.success > p:last-of-type {
+  font-size: 16px;
+  text-decoration: underline;
+  padding-top: 10px;
+}
+
+.container.success > p:last-of-type:hover {
+  color: #0853bd;
+  cursor: pointer;
+}
+
+.icon_success {
+  height:100px;
+  padding: 5px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Anonymous Pro", monospace;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0853bd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #033780;
+}
+
+small {
+  color: red;
+  display: none;
+}
+
+.anonymous-pro-regular {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.anonymous-pro-bold {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.anonymous-pro-regular-italic {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.anonymous-pro-bold-italic {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+      padding: 15px;
+      margin: 10px;
+  }
+
+  button {
+      padding: 8px;
+  }
+}
