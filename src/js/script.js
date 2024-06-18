@@ -9,6 +9,8 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   const tickets = document.getElementById('tickets');
   const successContainer = document.querySelector('.container.success');
   const fillableFormContainer = document.querySelector('.container.form');
+
+  //To track if all validations were successful
   let allValid = true;
 
   const nameRegex = /^[a-zA-Z\s]+$/;
@@ -61,6 +63,7 @@ function validateField(field, regex) {
   }
 }
 
+// validate date
 function isValidDate(dateString) {
   const dateRegex = /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
   return dateRegex.test(dateString);
@@ -81,7 +84,8 @@ function showSuccess(input) {
   input.style.borderColor = '#ccc';
 }
 
-function hideShow(toBeHidden, toBeShown, display_type) {
+// hides toBeHidden element and shows toBeShown element with a display attribute set to displayType
+function hideShow(toBeHidden, toBeShown, displayType) {
   toBeHidden.style.display = 'none';
-  toBeShown.style.display = display_type;
+  toBeShown.style.display = displayType;
 }
